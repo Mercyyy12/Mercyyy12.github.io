@@ -1,0 +1,126 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffebf0, #ffe4e1);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: fadeIn 2s;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%;
+    box-sizing: border-box;
+    animation: bounceIn 1s;
+    perspective: 1000px;
+}
+
+h1 {
+    color: #ff6f61;
+    font-family: 'Pacifico', cursive;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.emojis {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.response {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border: 2px solid #ff6f61;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff6f61;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3d33;
+    transform: scale(1.05);
+}
+
+.fly-in {
+    animation: flyIn 2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(100px) rotateY(0deg);
+}
+
+@keyframes flyIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) rotateY(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateY(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .container {
+        max-width: 600px;
+    }
+}
+
+/* Additional Keyframes for Smooth Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
