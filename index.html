@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I'm Sorry</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <title>Message Form</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file if needed -->
 </head>
 <body>
     <div class="container">
@@ -17,10 +17,11 @@
             😔 😢 🥺 🙏
         </div>
         <div class="response fly-in">
-            <textarea id="response" placeholder="Yesma respond gara hai I'll get the message..."></textarea>
-            <button onclick="submitResponse()">Submit</button>
+            <form id="messageForm">
+                <textarea id="response" placeholder="Enter your message..."></textarea>
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
